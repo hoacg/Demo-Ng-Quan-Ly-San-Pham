@@ -13,7 +13,11 @@ export class DanhMucComponent implements OnInit {
   constructor(private categoryService: DanhMucService) { }
 
   ngOnInit() {
-    this.categories = this.categoryService.getCategories();
+    // this.categories = this.categoryService.getCategories();
+
+    this.categoryService.getCategories().subscribe( result => {
+      this.categories = result;
+    });
   }
 
 }

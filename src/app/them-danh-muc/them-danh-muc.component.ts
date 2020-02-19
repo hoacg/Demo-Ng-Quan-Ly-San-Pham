@@ -19,7 +19,11 @@ export class ThemDanhMucComponent implements OnInit {
 
   save() {
     const name = this.formGroup.get('categoryName').value;
-    this.categoryService.addCategory(name);
+    this.categoryService.addCategory(name).subscribe( result => { // status: 200
+      alert('Đã thêm thành công!');
+    }, error => {
+      alert('Không thêm được!');
+    });
   }
 
 }

@@ -6,6 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { DanhMucComponent } from './danh-muc/danh-muc.component';
 import { ThemDanhMucComponent } from './them-danh-muc/them-danh-muc.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -27,7 +28,8 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
